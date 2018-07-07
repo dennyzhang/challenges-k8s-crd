@@ -12,7 +12,7 @@ Table of Contents
 # Requirements
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
-Scenario-102: Create a CRD with real controller
+Scenario-102: Create a CRD with a real controller
 - Requirements:
 ```
 1. Install and start minikube

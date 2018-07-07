@@ -20,7 +20,7 @@ Kubernets CRD: extend k8s resource
 
    * [Scenarios](#scenarios)
       * [Scenario-101: Create a dummy CRD resource](#scenario-101-create-a-dummy-crd-resource)
-      * [Scenario-102: Create a CRD with real controller](#scenario-102-create-a-crd-with-real-controller)
+      * [Scenario-102: Create a CRD with a real controller](#scenario-102-create-a-crd-with-a-real-controller)
    * [Highlights](#highlights)
    * [Contributors: Give People Credits](#contributors-give-people-credits)
    * [License](#license)
@@ -39,7 +39,7 @@ Kubernets CRD: extend k8s resource
 - Main Tech:
 - See more: [Scenario-101](./Scenario-101)
 
-## Scenario-102: Create a CRD with real controller
+## Scenario-102: Create a CRD with a real controller
 - Requirements:
 ```
 1. Install and start minikube
