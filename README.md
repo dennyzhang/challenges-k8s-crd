@@ -28,13 +28,14 @@ Kubernets CRD: extend k8s resource
 
 # Scenarios
 
-## Scenario-101: 
-- Objective:
+## Scenario-101: Create a dummy CRD resource
+- Objective: Create a dummy CRD resource
 - Requirements:
 ```
-1.
+1. Install and start minikube
+2. Create a dummy resource
+3. Create/read/update/delete this CRD
 ```
-- See [kubernetes.yaml](Scenario-101/kubernetes.yaml)
 - Main Tech:
 - See more: [Scenario-101](./Scenario-101)
 

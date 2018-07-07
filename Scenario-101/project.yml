@@ -1,0 +1,7 @@
+apiVersion: "example.denny/v1alpha"
+kind: "Project"
+metadata:
+  name: "example-project"
+  namespace: "default"
+spec:
+  replicas: 2
