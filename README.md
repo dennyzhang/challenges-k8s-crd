@@ -19,7 +19,8 @@ Table of Contents
 Kubernets CRD: extend k8s resource
 
    * [Scenarios](#scenarios)
-      * [Scenario-101: 1-Node K8S Deployment I](#scenario-101-1-node-k8s-deployment-i)
+      * [Scenario-101: Create a dummy CRD resource](#scenario-101-create-a-dummy-crd-resource)
+      * [Scenario-102: Create a CRD with real controller](#scenario-102-create-a-crd-with-real-controller)
    * [Highlights](#highlights)
    * [Contributors: Give People Credits](#contributors-give-people-credits)
    * [License](#license)
@@ -29,7 +30,6 @@ Kubernets CRD: extend k8s resource
 # Scenarios
 
 ## Scenario-101: Create a dummy CRD resource
-- Objective: Create a dummy CRD resource
 - Requirements:
 ```
 1. Install and start minikube
@@ -39,11 +39,22 @@ Kubernets CRD: extend k8s resource
 - Main Tech:
 - See more: [Scenario-101](./Scenario-101)
 
+## Scenario-102: Create a CRD with real controller
+- Requirements:
+```
+1. Install and start minikube
+2. Create a CRD
+3.
+```
+- Main Tech:
+- See more: [Scenario-102](./Scenario-102)
+
 # Highlights
 <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
 
 - More resources:
 ```
+https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
 https://blog.openshift.com/kubernetes-deep-dive-code-generation-customresources/
 https://github.com/kubernetes/code-generator
 https://github.com/kubernetes/sample-controller

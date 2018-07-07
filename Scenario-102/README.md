@@ -12,12 +12,12 @@ Table of Contents
 # Requirements
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
-Scenario-101: Create a dummy CRD resource
+Scenario-102: Create a CRD with real controller
 - Requirements:
 ```
 1. Install and start minikube
-2. Create a dummy resource
-3. Create/read/update/delete this CRD
+2. Create a CRD
+3.
 ```
 
 # Background & Highlights
