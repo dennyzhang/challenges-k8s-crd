@@ -31,18 +31,29 @@ Scenario-101: Create a dummy CRD resource
 minikube start
 
 kubectl apply -f ./crd.yml
+kubectl apply -f ./project.yml
 ```
 
 ## Verify Deployment
 ```
+kubectl get projects
+
+# ,----------- Sample Output
+# | bash-3.2$ kubectl get projects
+# | NAME              CREATED AT
+# | example-project   1d
+# `-----------
+
+kubectl delete project example-project
+
 kubectl get projects
 ```
 
 Destroy env:
 - Delete k8s resources
 ```
-kubectl delete -f ./project.yaml
-kubectl delete -f ./crd.yaml
+kubectl delete -f ./project.yml
+kubectl delete -f ./crd.yml
 ```
 
 # More resources
