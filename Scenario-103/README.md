@@ -12,7 +12,7 @@ Table of Contents
 # Requirements
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
-Scenario-102: Create CRD with Subresources
+Scenario-103: Create a CRD with a real controller
 - Requirements:
 ```
 1. Install and start minikube
@@ -21,8 +21,12 @@ Scenario-102: Create CRD with Subresources
 ```
 
 # Background & Highlights
+Read below links, before you trying the demo
 
-https://deploy-preview-7439--kubernetes-io-vnext-staging.netlify.com/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/#subresources
+```
+https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/
+https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
+```
 
 # Procedures
 
