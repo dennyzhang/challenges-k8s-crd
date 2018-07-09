@@ -22,7 +22,10 @@ Scenario-102: Create CRD with Subresources
 
 # Background & Highlights
 
+```
 https://deploy-preview-7439--kubernetes-io-vnext-staging.netlify.com/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/#subresources
+https://github.com/kubernetes/kubernetes/issues/38113
+```
 
 # Procedures
 
