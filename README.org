@@ -1,34 +1,53 @@
 *- mode:org; fill-column:70; coding:utf-8; -*-
-* org-mode configuration
-#+STARTUP: overview
-#+STARTUP: customtime
-#+STARTUP: noalign
-#+STARTUP: logdone
-#+STARTUP: hidestars
-#+TAGS: ARCHIVE(a) WEBPAGE(w) LIFE(l) IMPORTANT(i) Habit(h) Communication(c) Recite(r) noexport(n) Shopping(s) Difficult(d) Target(t) Misc(m) BLOG(b) Family(f)
-#+SEQ_TODO: TODO HALF ASSIGN | DONE CANCELED BYPASS DELEGATE DEFERRED
-#+DRAWERS: HIDDEN CODE CONF EMAIL WEBPAGE SNIP
-#+PRIORITIES: A D C
-#+ARCHIVE: %s_done::** Finished Tasks
-#+AUTHOR: dennyzhang.com (denny@dennyzhang.com)
-#+OPTIONS: toc:3
-#+OPTIONS: \n:t ^:nil LaTeX:nil @:nil
-#+OPTIONS: creator:nil
-#+OPTIONS: timestamp:t
 * [#A] kubernets CRD
-https://github.com/martin-helmich/kubernetes-crd-example
+* Implement CRD controller
+https://github.com/kubernetes/sample-controller
+* k8s OpenAPI-Specification
+https://github.com/OAI/OpenAPI-Specification
 
-https://kubernetes.io/docs/concepts/services-networking/service/
-** TODO k8s OpenAPI-Specification
- https://github.com/OAI/OpenAPI-Specification
+https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#schemaObject
 
-** TODO how to define a common syntax for different type
 ** TODO dynamic validate CRD per different types: https://github.com/pivotal-cf/namespace-drain/commit/3082432ba09093daf18263ee2c6e97814b300c6e#r29613054
-** TODO [#A] https://github.com/kubernetes/sample-controller
-** TODO https://github.com/kubernetes/code-generator
-** TODO https://blog.openshift.com/kubernetes-deep-dive-code-generation-customresources/
-** #  --8<-------------------------- separator ------------------------>8-- :noexport:
-** TODO Use CRD subresource
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO CRD inheritage
+* TODO how to define a common syntax for different type
+* TODO How CRD /status subresource is implemented?
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* TODO Bussiness values of CRD and operator
+```
+- k8s protocal (CNI)
+  - niche market protocal (Computing Common Resource)
+    - vendor protocal (vsphere Not-Common)
+
+k8s : engine + built-in plugins/resources (CNI, CSI, CRI, schedule )
+protocal
+apply-many
+
+sub-protocal
+1. CRD -> class (reality concept)
+   apply-many
+
+2. operator -> class/resources
+               actions (operate)
+   resource/service -> operate
+   convention
+```
+* DONE Use CRD subresource
+  CLOSED: [2018-07-09 Mon 10:03]
 https://deploy-preview-7439--kubernetes-io-vnext-staging.netlify.com/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/#subresources
 
 https://github.com/kubernetes/kubernetes/issues/38113
+
+Here is where CRD subresources feature starts
+https://github.com/kubernetes/kubernetes/issues/38113
+
+https://deploy-preview-7439--kubernetes-io-vnext-staging.netlify.com/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/#subresources
+Custom resources support /status and /scale subresources. This feature is alpha in v1.10 and may change in backward incompatible ways.
+* useful link
+https://github.com/martin-helmich/kubernetes-crd-example
+
+https://kubernetes.io/docs/concepts/services-networking/service/
+
+https://github.com/kubernetes/code-generator
+
+https://blog.openshift.com/kubernetes-deep-dive-code-generation-customresources/
