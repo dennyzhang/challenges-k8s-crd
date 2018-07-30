@@ -1,18 +1,96 @@
+* org-mode configuration                                           :noexport:
+#+STARTUP: overview customtime noalign logdone hidestars
+#+TITLE:  Kubernets CRD
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+AUTHOR: Denny Zhang
+#+EMAIL:  denny@dennyzhang.com
+#+TAGS: noexport(n)
+#+PRIORITIES: A D C
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+EXPORT_EXCLUDE_TAGS: exclude noexport
+#+SEQ_TODO: TODO HALF ASSIGN | DONE BYPASS DELEGATE CANCELED DEFERRED
+#+LINK_UP:   
+#+LINK_HOME: 
+* Summary
+#+BEGIN_HTML
+<a href="https://www.linkedin.com/in/dennyzhang001"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
+<a href="https://github.com/DennyZhang"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
+<a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="http://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
+<a href="https://github.com/DennyZhang"><img align="right" width="200" height="183" src="https://www.dennyzhang.com/wp-content/uploads/denny/watermark/github.png" /></a>
+
+<br/><br/>
+
+<a href="http://makeapullrequest.com" target="_blank" rel="nofollow"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"/></a>
+#+END_HTML
+* Kubernets
+File me [[https://github.com/DennyZhang/challenges-k8s-crd/issues][Issues]] or star [[https://github.com/DennyZhang/challenges-k8s-crd][this repo]].
+
+See more Kubernets sharing from Denny: [[https://github.com/topics/denny-kubernetes][#denny-kubernetes]]
+
+** Scenario-101: Create a dummy CRD resource
+- Requirements:
+#+BEGIN_EXAMPLE
+1. Install and start minikube
+2. Create a dummy resource
+3. Create/read/update/delete this CRD
+#+END_EXAMPLE
+- Main Tech:
+- See more: [[Scenario-101][Scenario-101]]
+
+** Scenario-102: Create CRD with Subresources
+- Requirements:
+#+BEGIN_EXAMPLE
+1. Install and start minikube
+2. Create a CRD
+3.
+#+END_EXAMPLE
+
+- Main Tech:
+- See more: [[Scenario-102][Scenario-102]]
+
+** Scenario-103: Create a CRD with a real controller
+- Requirements:
+#+BEGIN_EXAMPLE
+1. Install and start minikube
+2. Create a CRD
+3.
+#+END_EXAMPLE
+- Main Tech:
+- See more: [[Scenario-103][Scenario-103]]
+* More Resources
+License: Code is licensed under [[https://www.dennyzhang.com/wp-content/mit_license.txt][MIT License]].
+
+#+BEGIN_EXAMPLE
+https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
+https://blog.openshift.com/kubernetes-deep-dive-code-generation-customresources/
+https://github.com/kubernetes/code-generator
+https://github.com/kubernetes/sample-controller
+#+END_EXAMPLE
+
+#+BEGIN_HTML
+<a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
+
+<a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+#+END_HTML
 *- mode:org; fill-column:70; coding:utf-8; -*-
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * [#A] kubernets CRD
 * Implement CRD controller
+https://medium.com/@trstringer/create-kubernetes-controllers-for-core-and-custom-resources-62fc35ad64a3
 https://github.com/kubernetes/sample-controller
+https://engineering.bitnami.com/articles/kubewatch-an-example-of-kubernetes-custom-controller.html
 * k8s OpenAPI-Specification
 https://github.com/OAI/OpenAPI-Specification
 
 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#schemaObject
-
 ** TODO dynamic validate CRD per different types: https://github.com/pivotal-cf/namespace-drain/commit/3082432ba09093daf18263ee2c6e97814b300c6e#r29613054
-* #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* TODO CRD inheritage
+* TODO how to deploy CRD controller in real production
+* TODO What if controller has crashed.
+* TODO [#A] CRD inheritage
 * TODO how to define a common syntax for different type
 * TODO How CRD /status subresource is implemented?
-* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * TODO Bussiness values of CRD and operator
 ```
 - k8s protocal (CNI)
@@ -32,6 +110,7 @@ sub-protocal
    resource/service -> operate
    convention
 ```
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * DONE Use CRD subresource
   CLOSED: [2018-07-09 Mon 10:03]
 https://deploy-preview-7439--kubernetes-io-vnext-staging.netlify.com/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/#subresources
@@ -43,6 +122,15 @@ https://github.com/kubernetes/kubernetes/issues/38113
 
 https://deploy-preview-7439--kubernetes-io-vnext-staging.netlify.com/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/#subresources
 Custom resources support /status and /scale subresources. This feature is alpha in v1.10 and may change in backward incompatible ways.
+
+#+BEGIN_EXAMPLE
+Then new namespaced RESTful API endpoints are created at:
+
+/apis/stable.example.com/v1/namespaces/*/crontabs/status
+and
+
+/apis/stable.example.com/v1/namespaces/*/crontabs/scale
+#+END_EXAMPLE
 * useful link
 https://github.com/martin-helmich/kubernetes-crd-example
 

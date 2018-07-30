@@ -1,7 +1,0 @@
-apiVersion: "denny.com/v1alpha"
-kind: "Project"
-metadata:
-  name: "example-project"
-  namespace: "default"
-spec:
-  replicas: 3
