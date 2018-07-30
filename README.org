@@ -67,6 +67,9 @@ https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-r
 https://blog.openshift.com/kubernetes-deep-dive-code-generation-customresources/
 https://github.com/kubernetes/code-generator
 https://github.com/kubernetes/sample-controller
+
+https://github.com/martin-helmich/kubernetes-crd-example
+https://kubernetes.io/docs/concepts/services-networking/service/
 #+END_EXAMPLE
 
 #+BEGIN_HTML
@@ -76,22 +79,22 @@ https://github.com/kubernetes/sample-controller
 #+END_HTML
 *- mode:org; fill-column:70; coding:utf-8; -*-
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* [#A] kubernets CRD
-* Implement CRD controller
-https://medium.com/@trstringer/create-kubernetes-controllers-for-core-and-custom-resources-62fc35ad64a3
-https://github.com/kubernetes/sample-controller
-https://engineering.bitnami.com/articles/kubewatch-an-example-of-kubernetes-custom-controller.html
-* k8s OpenAPI-Specification
+* k8s OpenAPI-Specification                                        :noexport:
 https://github.com/OAI/OpenAPI-Specification
 
 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#schemaObject
 ** TODO dynamic validate CRD per different types: https://github.com/pivotal-cf/namespace-drain/commit/3082432ba09093daf18263ee2c6e97814b300c6e#r29613054
-* TODO how to deploy CRD controller in real production
-* TODO What if controller has crashed.
-* TODO [#A] CRD inheritage
-* TODO how to define a common syntax for different type
-* TODO How CRD /status subresource is implemented?
-* TODO Bussiness values of CRD and operator
+* [#A] kubernets CRD                                               :noexport:
+** Implement CRD controller
+ https://medium.com/@trstringer/create-kubernetes-controllers-for-core-and-custom-resources-62fc35ad64a3
+ https://github.com/kubernetes/sample-controller
+ https://engineering.bitnami.com/articles/kubewatch-an-example-of-kubernetes-custom-controller.html
+** TODO how to deploy CRD controller in real production
+** TODO What if controller has crashed.
+** TODO [#A] CRD inheritage
+** TODO how to define a common syntax for different type
+** TODO How CRD /status subresource is implemented?
+** TODO Bussiness values of CRD and operator
 ```
 - k8s protocal (CNI)
   - niche market protocal (Computing Common Resource)
@@ -110,8 +113,7 @@ sub-protocal
    resource/service -> operate
    convention
 ```
-* #  --8<-------------------------- separator ------------------------>8-- :noexport:
-* DONE Use CRD subresource
+** DONE Use CRD subresource
   CLOSED: [2018-07-09 Mon 10:03]
 https://deploy-preview-7439--kubernetes-io-vnext-staging.netlify.com/docs/tasks/access-kubernetes-api/extend-api-custom-resource-definitions/#subresources
 
@@ -131,11 +133,5 @@ and
 
 /apis/stable.example.com/v1/namespaces/*/crontabs/scale
 #+END_EXAMPLE
-* useful link
-https://github.com/martin-helmich/kubernetes-crd-example
 
-https://kubernetes.io/docs/concepts/services-networking/service/
 
-https://github.com/kubernetes/code-generator
-
-https://blog.openshift.com/kubernetes-deep-dive-code-generation-customresources/
