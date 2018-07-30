@@ -44,7 +44,6 @@ See more Kubernets sharing from Denny: [[https://github.com/topics/denny-kuberne
 #+BEGIN_EXAMPLE
 1. Install and start minikube
 2. Create a CRD
-3.
 #+END_EXAMPLE
 
 - Main Tech:
@@ -55,7 +54,6 @@ See more Kubernets sharing from Denny: [[https://github.com/topics/denny-kuberne
 #+BEGIN_EXAMPLE
 1. Install and start minikube
 2. Create a CRD
-3.
 #+END_EXAMPLE
 - Main Tech:
 - See more: [[Scenario-103][Scenario-103]]
@@ -77,7 +75,6 @@ https://kubernetes.io/docs/concepts/services-networking/service/
 
 <a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 #+END_HTML
-*- mode:org; fill-column:70; coding:utf-8; -*-
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * k8s OpenAPI-Specification                                        :noexport:
 https://github.com/OAI/OpenAPI-Specification
@@ -133,5 +130,3 @@ and
 
 /apis/stable.example.com/v1/namespaces/*/crontabs/scale
 #+END_EXAMPLE
-
-
