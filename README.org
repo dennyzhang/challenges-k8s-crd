@@ -22,6 +22,11 @@ File me [[https://github.com/DennyZhang/challenges-k8s-crd/issues][Issues]] or s
 
 See more Kubernets sharing from Denny: [[https://github.com/topics/denny-kubernetes][#denny-kubernetes]]
 
+** Questions
+*** How to instruct controller to restart a pod/container
+*** resource vs sub-resource
+https://github.com/kubernetes/kubernetes/blob/1b3a2dd0830ca0e02d5b95d2ecc0161d0c93a0c7/staging/src/k8s.io/apiextensions-apiserver/pkg/registry/customresource/etcd.go#L36-L41
+*** [#A] Deal with controller crash issue
 ** Scenario-101: Create a dummy CRD resource
 - Requirements:
 #+BEGIN_EXAMPLE
