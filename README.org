@@ -1,4 +1,4 @@
-* Kubernets CRD                                                     :Concept:
+* Kubernetes CRD                                                     :Concept:
 :PROPERTIES:
 :type:     crd
 :END:
@@ -20,11 +20,19 @@ Blog URL: https://kubernetes.dennyzhang.com/challenges-k8s-crd, Category: [[http
 
 File me [[https://github.com/DennyZhang/challenges-k8s-crd/issues][Issues]] or star [[https://github.com/DennyZhang/challenges-k8s-crd][this repo]].
 
-See more Kubernets sharing from Denny: [[https://github.com/topics/denny-kubernetes][#denny-kubernetes]]
+See more Kubernetes sharing from Denny: [[https://github.com/topics/denny-kubernetes][#denny-kubernetes]]
 
 ** Questions
+*** DONE [#A] Two ways to extend kubernetes API: crd and aggregator
+    CLOSED: [2018-10-02 Tue 23:08]
+https://kubernetes.io/docs/reference/using-api/api-overview/
+
+https://github.com/kubernetes/community/blob/master/contributors/design-proposals/api-machinery/aggregated-api-servers.md
+- CustomResourceDefinition for basic CRUD needs.
+- Aggregator for a full set of Kubernetes API semantics to implement their own apiserver.
 *** How to instruct controller to restart a pod/container
-*** resource vs sub-resource
+*** DONE resource vs sub-resource
+    CLOSED: [2018-10-02 Tue 11:40]
 https://github.com/kubernetes/kubernetes/blob/1b3a2dd0830ca0e02d5b95d2ecc0161d0c93a0c7/staging/src/k8s.io/apiextensions-apiserver/pkg/registry/customresource/etcd.go#L36-L41
 *** [#A] Deal with controller crash issue
 ** Scenario-101: Create a dummy CRD resource
@@ -82,18 +90,20 @@ https://github.com/martin-helmich/kubernetes-crd-example
 https://kubernetes.io/docs/concepts/services-networking/service/
 #+END_EXAMPLE
 
-#+BEGIN_EXPORT HTML
+#+BEGIN_HTML
 <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
 
 <a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
-#+END_EXPORT
+#+END_HTML
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * k8s OpenAPI-Specification                                        :noexport:
 https://github.com/OAI/OpenAPI-Specification
 
 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#schemaObject
 ** TODO dynamic validate CRD per different types: https://github.com/pivotal-cf/namespace-drain/commit/3082432ba09093daf18263ee2c6e97814b300c6e#r29613054
-* [#A] kubernets CRD                                               :noexport:
+* [#A] Kubernetes CRD                                               :noexport:
+** TODO [#A] Implement controller
+https://github.com/kubernetes/sample-controller
 ** Implement CRD controller
  https://medium.com/@trstringer/create-kubernetes-controllers-for-core-and-custom-resources-62fc35ad64a3
  https://github.com/kubernetes/sample-controller
@@ -142,3 +152,5 @@ and
 
 /apis/stable.example.com/v1/namespaces/*/crontabs/scale
 #+END_EXAMPLE
+* CRD controller: handle resource deletion events                  :noexport:
+* TODO CRD scope: cluster: how to validate it                      :noexport:
