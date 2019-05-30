@@ -101,13 +101,32 @@ https://github.com/OAI/OpenAPI-Specification
 
 https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#schemaObject
 ** TODO dynamic validate CRD per different types: https://github.com/pivotal-cf/namespace-drain/commit/3082432ba09093daf18263ee2c6e97814b300c6e#r29613054
+* CRD controller: handle resource deletion events                  :noexport:
+* TODO CRD scope: cluster: how to validate it                      :noexport:
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
+* DONE Create crd schema                                           :noexport:
+  CLOSED: [2019-05-30 Thu 11:08]
+https://blog.heptio.com/an-introduction-to-extending-kubernetes-with-customresourcedefinitions-76deb675b27a
+* DONE [#A] CRD vs API server aggregation                          :noexport:
+  CLOSED: [2019-05-30 Thu 14:22]
+https://www.manifold.co/blog/the-state-of-custom-resource-definitions-in-kubernetes-5498425dd553
+If CRDs don’t meet your needs, you might want to consider API server aggregation instead. API server aggregation gives you complete control over how your resources are defined, stored, and accessed. This complete control is also their burden.
+* TODO create crd controller                                       :noexport:
+https://itnext.io/building-an-operator-for-kubernetes-with-the-sample-controller-b4204be9ad56
+
+https://github.com/kubernetes/sample-controller
+* TODO Client-go project: provides us with packages using which we can easily create go client and access the Kubernetes cluster. :noexport:
+https://medium.com/velotio-perspectives/extending-kubernetes-apis-with-custom-resource-definitions-crds-139c99ed3477
+
+https://github.com/kubernetes/client-go
+* #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * [#A] Kubernetes CRD                                               :noexport:
 ** TODO [#A] Implement controller
 https://github.com/kubernetes/sample-controller
 ** Implement CRD controller
- https://medium.com/@trstringer/create-kubernetes-controllers-for-core-and-custom-resources-62fc35ad64a3
- https://github.com/kubernetes/sample-controller
- https://engineering.bitnami.com/articles/kubewatch-an-example-of-kubernetes-custom-controller.html
+https://medium.com/@trstringer/create-kubernetes-controllers-for-core-and-custom-resources-62fc35ad64a3
+https://github.com/kubernetes/sample-controller
+https://engineering.bitnami.com/articles/kubewatch-an-example-of-kubernetes-custom-controller.html
 ** TODO how to deploy CRD controller in real production
 ** TODO What if controller has crashed.
 ** TODO [#A] CRD inheritage
@@ -152,5 +171,5 @@ and
 
 /apis/stable.example.com/v1/namespaces/*/crontabs/scale
 #+END_EXAMPLE
-* CRD controller: handle resource deletion events                  :noexport:
-* TODO CRD scope: cluster: how to validate it                      :noexport:
+* [#A] CRD concepts                                                :noexport:
+https://medium.com/@trstringer/create-kubernetes-controllers-for-core-and-custom-resources-62fc35ad64a3
